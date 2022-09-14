@@ -43,7 +43,7 @@ The arg 'env' is the name that we decide to put to the virtual environment
 
 ```html
 
-		<strong>localhost:5000</strong>
+		localhost:5000
 		
 ```
 Or the URL that Flask show you when it initilizes.
