@@ -1,0 +1,189 @@
+html,
+body {
+  height: 100%;
+  /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(97,9,121,1) 46%, rgba(205,22,159,1) 100%);*/
+  /*background-image: linear-gradient( to bottom right, #2af598, #3bd9d9,#009efd);*/
+  /*background-image: linear-gradient( to bottom right, #00dbde, #fc00ff);*/
+  background-image: linear-gradient(to bottom right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 100%);
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+
+header{
+  width: 100%;
+  height: 50px;
+  background:  #616161;
+  padding: 0 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+
+.alert{
+  padding: 8px;
+  background-color: #f44336;
+  color: white;
+}
+
+
+.name{
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+
+.login-codex{
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  color: #e3dcce;
+  outline: 0;
+}
+
+
+.card{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top:15%;
+  left: 0;
+  width: 20rem;
+  height: 26rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+
+.card img.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+
+.card h5{
+  margin-top : 1em;
+  margin-bottom: 2em;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+
+.card .input-field{
+  margin: 0 auto;
+  position:relative;
+  width:170px;
+  height: 44px;
+}
+
+
+label.check{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+}
+
+
+input[type="text"], input[type="password"]{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.1rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+  background: transparent;
+}
+
+
+input:invalid{
+  outline: 0;
+}
+
+
+input[type="text"]:focus,input[type="text"]:valid, input[type="password"]:focus, input[type="password"]:valid{
+  border-color: #3bd9d9;
+}
+
+
+input[type="text"]:focus~label,input[type="text"]:valid~label, input[type="password"]:focus~label, input[type="password"]{
+  font-size:12px;
+  top:-10px;
+  color: #3bd9d9;
+}
+
+
+.card .input-check{
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+
+.card button.signIn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+
+.card .signIn{
+  position: relative;
+  background : transparent;
+  color : #3bd9d9;
+  text-transform : uppercase;
+  padding : 8px 28px;
+  border: 2px solid #3bd9d9;
+  border-radius: 32px;
+  transform: translate(0);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+button::before {
+  content: "";
+  position: absolute;
+  background: #3bd9d9;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  left: -32px;
+  transform: rotate(-16deg);
+  filter: blur(6px);
+}
+
+
+button:hover::before{
+  left: calc(100% + 32px);
+  transition: 0.75s;
+}
+
+
+.register{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+}
+
+
+a{
+  text-decoration: none;
+}

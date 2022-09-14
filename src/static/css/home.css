@@ -1,0 +1,313 @@
+html,
+body {
+    height: 100%;
+    /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(97,9,121,1) 46%, rgba(205,22,159,1) 100%);*/
+    /*background-image: linear-gradient( to bottom right, #2af598, #3bd9d9,#009efd);*/
+    /*background-image: linear-gradient( to bottom right, #00dbde, #fc00ff);*/
+    background-image: linear-gradient(to bottom right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 100%, #b12a5b 100%);
+    display: grid;
+    grid-template-rows: auto;
+  }
+
+
+  header{
+    width: 100%;
+    height: 50px;
+    background:  #616161;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  h1{
+    padding: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: -2rem;
+  }
+
+
+  .alert{
+    height: 2rem;
+    width: 10rem;
+    padding: 8px;
+    background-color: #f44336;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+  .name{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+
+  .home-codex{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: #e3dcce;
+    outline: 0;
+  }
+
+
+  .close-btn{
+    height: 1rem;
+    width: 2rem;
+  }
+
+  
+  .B{
+    text-decoration: none;
+    color: aliceblue;
+    outline: 0;
+  }
+
+
+  .send_added_task{
+    margin: 0 auto;
+    margin-top: -2rem
+  }
+
+
+  .send_added_task .input-field{
+    display: grid;
+    grid-template-rows: 1fr 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .send_added_task .input_task{
+    height: 2.2rem;
+    width: 18rem;
+    outline: 0;
+    border-radius: 3px;
+    border-color: black;
+  }
+
+
+  .send_added_task .send{
+    
+    width: 12rem;
+    height: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #2BD6CD;
+    cursor: pointer;
+  }
+
+
+  .container{
+    margin: 0 auto;
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 30rem;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    overflow: auto;     
+  }
+
+
+  .container::-webkit-scrollbar{
+    width: 0;
+  }
+
+
+  .container .card{
+    --width: 20em;
+    --height: 26em;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--width);
+    height: var(--height);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+  }
+
+
+  .card div.inbox{
+    width: var(--width);
+    --height_: calc(var(--width)/2);
+    height: var(--height_);
+    background-color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-image: url('/static/img/social_logo.png');
+  }
+
+
+  .del{
+    --margin_right_delt: calc(var(--width) - 8%);
+    margin-left: var( --margin_right_delt) ;
+  }
+
+
+  img.delete_src{
+    margin-top: 2%;
+  }
+
+
+  .card .layout_down{
+    width: var(--width);
+    height: calc( var(--height) - (var(--width)/2)); /*En teoria deveria ir 'var(--height_)', pero no funciona bien*/
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    background-color: #efeaea;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  }
+
+
+  .card .task_and_edit{
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: "Radio Grotesk";
+    text-transform: uppercase;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: initial;
+  }
+
+
+  .edit{
+    outline: 0;
+  }
+
+
+  .limit_day{
+    text-align: center;
+    font-size: 10px;
+  }
+
+
+  .card .wrap-toggle{
+    border-radius: 30px;
+  }
+
+
+  .card .switch{
+    --width: 90px;
+    width: var(--width);
+    margin: 10px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: inherit;
+    outline: 2px solid #616161;
+    background-color:  #fc1173;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+
+  .card .switch::before{
+    content: "";
+    width: 100%;
+    height:100%;
+    background-color: #26f119;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+
+  .card .switch::after{
+    --size:25px; /*Tamaño de la toggle*/
+    --gap: 5px; /*Distancia del margin lateral */
+    font-family: FontAwesome;
+    content: "❌";
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 0;
+    transform: translateX(var(--gap));
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: #eaeef0;
+    transition: all .25s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+
+  input[type='checkbox']:checked~.switch::before{
+    opacity: 2;
+  }
+
+
+  input[type='checkbox']:checked~.switch::after{
+    --distance: calc(var(--width) - var(--gap) - var(--size));
+    content: '✔️';
+    transform: translateX( var(--distance));
+  }
+
+
+  .offscreen{
+    display: none;
+  }
+
+
+  input[type=submit]{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+
+
+  input[type=text]{
+    padding: 12px 8px;
+  }
+
+  .container ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+
+  .new_task{
+    margin: 0 auto;
+    display: flex;
+  }
+
+  
+  .C{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #2BD6CD;
+    outline: 0;
+  }

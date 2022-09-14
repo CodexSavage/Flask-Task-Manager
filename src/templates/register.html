@@ -1,0 +1,43 @@
+{% extends './index.html' %}
+{% block title %} Register {% endblock %}
+{% block customCSS %}
+<link rel="stylesheet" href="/static/css/register.css">
+{% endblock %}
+{% block body %}
+<header>
+    <h3 class="name">codexsavage</h3>
+</header>
+<div class="card">
+    <form  action="/register" method="POST">
+        <h5>REGISTER</h5>
+        {% for message in get_flashed_messages() %}
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{message }}
+            </div>
+            <br>
+        {% endfor %}
+        <div class="input-field">
+            <input type="text"  id="uname" name="uname" required>
+            <label class="check" for="uname">Username</label>
+        </div>
+        <div class="input-field">
+            <input type="text"  id="email" name="email" required>
+            <label class="check" for="email">Email</label>
+        </div>
+        <div class="input-field">
+            <input type="text"  id="fname" name="fname" required>
+            <label class="check" for="fname">Fullname</label>
+        </div>
+        <div class="input-field">
+            <input type="password" id="pwd" name="pwd" required >
+            <label class="check" for="pwd" >Password</label>
+        </div>
+        <div class="input-field">
+            <input type="password" id="confirm-pwd" name="confirm-pwd" required >
+            <label class="check" for="confirm-pwd" >Confirm password</label>
+        </div>
+        <button class="signIn" type="submit">Send</button>
+    </form>
+</div>
+{% endblock %}
