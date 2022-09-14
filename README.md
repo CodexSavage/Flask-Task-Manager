@@ -1,6 +1,10 @@
 # Flask-Task-Manager
 Web application for task manager with Python and Flask
 
+### Prerequirements
+
+* Install Python 3.9.13 or higger.
+
 ### Instructions
 
 1. First of all, we have to work in a virtual environment. To do this, we need to install the Python virtual environment.
