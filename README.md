@@ -44,6 +44,6 @@ The arg 'env' is the name that we decide to put to the virtual environment
 Or click the URL that Flask show you when it initilizes.
 <center>
 
-![Flask init](img/init-flask.png)
+![Flask init](img/init_flask.png)
 
 </center>
