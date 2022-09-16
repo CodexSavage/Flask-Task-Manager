@@ -1,9 +1,18 @@
 # Flask-Task-Manager
 Web application for task manager with Python and Flask
 
-### Prerequirements
+### Requirements
 
 * Install Python 3.9.13 or higger.
+* Install Git
+
+### Clone repository
+
+```bash
+
+				git clone https://github.com/CodexSavage/Flask-Task-Manager.git
+
+```
 
 ### Instructions
 
