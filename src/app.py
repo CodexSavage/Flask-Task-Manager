@@ -149,20 +149,21 @@ def register(): # Done
         fullname = request.form['fname']
         pwd = request.form['pwd']
         confirm_pwd = request.form['confirm-pwd']
-        if confirm_pwd is not pwd:
+        if confirm_pwd != pwd:
             flash("Password is not correct")
             # print("Contraseeña no igual")
-            #return render_template('register.html')
-        # print("{} {} {} {}".format(username, email, fullname, pwd))
-        validateUser = ModelUser.Registration(db, username_= username, email_ = email, fullname_ = fullname, password_= pwd)
-        # print(validateUser)
-        if validateUser:
-            # print("Registro completado")
-            return redirect('login')
-        else:
-            # print("Usuario o correo ya existente")
-            flash("User or email already exist...")
             return render_template('register.html')
+        # print("{} {} {} {}".format(username, email, fullname, pwd))
+        else:
+            validateUser = ModelUser.Registration(db, username_= username, email_ = email, fullname_ = fullname, password_= pwd)
+        # print(validateUser)
+            if validateUser:
+            # print("Registro completado")
+                return redirect('login')
+            else:
+                # print("Usuario o correo ya existente")
+                flash("User or email already exist...")
+                return render_template('register.html')
     else:
         return render_template('register.html')
 
